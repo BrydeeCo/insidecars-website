@@ -426,9 +426,10 @@ input,textarea{font-family:inherit}
   <div style="background:#1c1710;border:1px solid #3a3129;border-radius:4px;max-width:380px;width:100%;padding:32px 28px;text-align:center;animation:fadeUp .28s ease">
     <div style="width:52px;height:52px;margin:0 auto 18px;border-radius:50%;background:rgba(201,160,106,.14);border:1px solid #4a3f31;display:flex;align-items:center;justify-content:center;color:#c9a06a;font-size:24px">☎</div>
     <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.2;margin-bottom:12px">Calling Adam at Inside Cars</div>
-    <p style="color:#cbc1b1;font-size:15.5px;line-height:1.6;margin:0 0 26px">If we don't pick up right away, please leave a text and I'll call you back as soon as possible.</p>
+    <p style="color:#cbc1b1;font-size:15.5px;line-height:1.6;margin:0 0 26px">If you can't reach Adam on the workshop line, leave a quote request in the form at the bottom of the page and he'll get back to you as soon as possible.</p>
     <div style="display:flex;flex-direction:column;gap:10px">
       <a href="{{ phoneHref }}" onClick="{{ dialNow }}" style="background:#c9a06a;color:#17130f;font-weight:700;font-size:15px;padding:14px;border-radius:2px">Call {{ phone }}</a>
+      <button onClick="{{ quoteFromCall }}" style="background:none;border:1px solid #4a3f31;color:#f2ece2;font-weight:600;font-size:15px;padding:13px;border-radius:2px">Leave a quote request</button>
       <button onClick="{{ closeCall }}" style="background:none;color:#a89a86;border:none;font-size:14px;font-weight:500;padding:8px">Cancel</button>
     </div>
   </div>
@@ -572,7 +573,7 @@ class Component extends DCLogic {
       isHome: page==='home', isServices: page==='services', isAbout: page==='about', isGallery: page==='gallery', isContact: page==='contact',
       goHome: ()=>this.go('home'), goServices: ()=>this.go('services'), goAbout: ()=>this.go('about'), goGallery: ()=>this.go('gallery'), goContact: ()=>this.go('contact'),
       isMobile, isDesktop: !isMobile, mobileNavOpen: this.state.mobileNavOpen, toggleNav: ()=>this.toggleNav(),
-      openCall: (e)=>this.openCall(e), callOpen: this.state.callOpen, closeCall: ()=>this.closeCall(), dialNow: ()=>this.dialNow(),
+      openCall: (e)=>this.openCall(e), callOpen: this.state.callOpen, closeCall: ()=>this.closeCall(), dialNow: ()=>this.dialNow(), quoteFromCall: ()=>{ this.closeCall(); this.go('contact'); },
       navItems: [
         { label:'Home', active:page==='home', click:()=>this.go('home') },
         { label:'Services', active:page==='services', click:()=>this.go('services') },
