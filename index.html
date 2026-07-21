@@ -334,7 +334,7 @@ input,textarea{font-family:inherit}
     <sc-for list="{{ contactCards }}" as="cc" hint-placeholder-count="3"><div style="border:1px solid #2d251d;padding:26px"><div style="color:#c9a06a;font-size:20px;margin-bottom:12px">{{ cc.icon }}</div><div style="font-weight:600;font-size:15px;margin-bottom:8px">{{ cc.h }}</div><div style="color:#cbc1b1;font-size:15px;line-height:1.6;white-space:pre-line">{{ cc.p }}</div></div></sc-for>
   </section>
   <section style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(24px,4vw,48px)">
-    <div style="aspect-ratio:24/9;position:relative;border:1px solid #2d251d"><div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#251e17,#251e17 14px,#201a13 14px,#201a13 28px);display:flex;align-items:center;justify-content:center"><span style="font-family:ui-monospace,monospace;font-size:11px;color:#8a7f6f;background:rgba(23,19,15,.6);padding:5px 10px;border-radius:2px">Embedded Google Map — 9 John St, Bayswater VIC 3153</span></div></div>
+    <div style="aspect-ratio:24/9;position:relative;border:1px solid #2d251d;overflow:hidden"><iframe src="https://maps.google.com/maps?q=9%20John%20St%2C%20Bayswater%20VIC%203153&amp;z=15&amp;output=embed" title="Inside Cars — 9 John St, Bayswater VIC 3153" loading="lazy" referrerpolicy="no-referrer-when-downgrade" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div>
   </section>
 </div>
 </sc-if>
@@ -573,7 +573,7 @@ class Component extends DCLogic {
       isHome: page==='home', isServices: page==='services', isAbout: page==='about', isGallery: page==='gallery', isContact: page==='contact',
       goHome: ()=>this.go('home'), goServices: ()=>this.go('services'), goAbout: ()=>this.go('about'), goGallery: ()=>this.go('gallery'), goContact: ()=>this.go('contact'),
       isMobile, isDesktop: !isMobile, mobileNavOpen: this.state.mobileNavOpen, toggleNav: ()=>this.toggleNav(),
-      openCall: (e)=>this.openCall(e), callOpen: this.state.callOpen, closeCall: ()=>this.closeCall(), dialNow: ()=>this.dialNow(), quoteFromCall: ()=>{ this.closeCall(); this.go('contact'); },
+      openCall: (e)=>this.openCall(e), callOpen: this.state.callOpen, closeCall: ()=>this.closeCall(), dialNow: ()=>this.dialNow(), quoteFromCall: ()=>{ this.closeCall(); if(typeof window!=='undefined'){ const el=document.getElementById('quote'); if(el) window.scrollTo({top: el.offsetTop-60, behavior:'smooth'}); } },
       navItems: [
         { label:'Home', active:page==='home', click:()=>this.go('home') },
         { label:'Services', active:page==='services', click:()=>this.go('services') },
