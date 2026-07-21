@@ -1,0 +1,634 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Car Upholstery & Motor Trimming Bayswater | Inside Cars</title>
+<meta name="description" content="Expert car upholstery and motor trimming in Bayswater. Roof lining repair, seat retrims, leather repair, custom interiors and classic restorations across Melbourne's eastern suburbs.">
+<link rel="canonical" href="https://insidecars.com.au/">
+<meta property="og:title" content="Car Upholstery & Motor Trimming Bayswater | Inside Cars">
+<meta property="og:description" content="Sagging roof linings, torn seats, cracked leather and full custom interiors, restored by hand in our Bayswater workshop.">
+<meta property="og:url" content="https://insidecars.com.au/">
+<meta property="og:type" content="website">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#17130f;color:#f2ece2;font-family:'Hanken Grotesk',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#dcb87e;text-decoration:none}
+a:hover{color:#f0d6a3}
+button{font-family:inherit;cursor:pointer}
+input,textarea{font-family:inherit}
+::selection{background:#c9a06a;color:#17130f}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+::-webkit-scrollbar{width:11px;height:11px}
+::-webkit-scrollbar-track{background:#17130f}
+::-webkit-scrollbar-thumb{background:#3a3129;border-radius:6px}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"AutoRepair","name":"Inside Cars","description":"Expert car upholstery and motor trimming in Bayswater, serving Melbourne's eastern suburbs. Roof lining repair, seat retrims, leather repair, custom interiors and classic car restoration.","image":"","address":{"@type":"PostalAddress","streetAddress":"9 John St","addressLocality":"Bayswater","addressRegion":"VIC","postalCode":"3153","addressCountry":"AU"},"telephone":"+61398000003","priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"08:00","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"09:00","closes":"12:00"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.6","reviewCount":"36"},"areaServed":["Bayswater","Wantirna South","Wantirna","Knoxfield","Boronia","Ferntree Gully","Ringwood","Heathmont","Croydon","Kilsyth","Scoresby","Rowville","Melbourne Eastern Suburbs"],"founder":{"@type":"Person","name":"Adam","jobTitle":"Master Motor Trimmer"}}</script>
+</helmet>
+
+<header style="position:sticky;top:0;z-index:50;background:rgba(23,19,15,.86);backdrop-filter:blur(12px);border-bottom:1px solid #2d251d">
+  <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px">
+    <button onClick="{{ goHome }}" style="display:flex;align-items:baseline;gap:10px;background:none;border:none;padding:0;color:#f2ece2">
+      <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:25px;letter-spacing:.01em">Inside Cars</span>
+      <span style="font-family:'Hanken Grotesk';font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8a7f6f;transform:translateY(-2px)">Est. Bayswater</span>
+    </button>
+    <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;align-items:center;gap:22px">
+      <nav style="display:flex;align-items:center;gap:6px">
+        <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5">
+          <button onClick="{{ n.click }}" style="position:relative;background:none;border:none;color:#cbc1b1;font-size:13.5px;font-weight:500;letter-spacing:.02em;padding:8px 13px;transition:color .18s" style-hover="color:#f2ece2">{{ n.label }}<sc-if value="{{ n.active }}"><span style="position:absolute;left:13px;right:13px;bottom:2px;height:1.5px;background:#c9a06a"></span></sc-if></button>
+        </sc-for>
+      </nav>
+      <a href="{{ phoneHref }}" onClick="{{ openCall }}" style="display:flex;align-items:center;gap:8px;color:#f2ece2;font-weight:600;font-size:14px">
+        <span style="width:30px;height:30px;border:1px solid #4a3f31;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#c9a06a">â˜Ž</span>
+        <span>{{ phone }}</span>
+      </a>
+      <button onClick="{{ goContact }}" style="background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:13.5px;letter-spacing:.02em;padding:11px 20px;border-radius:2px;transition:background .18s" style-hover="background:#dcb87e">Get a Quote</button>
+    </div>
+    </sc-if>
+    <sc-if value="{{ isMobile }}">
+    <div style="display:flex;align-items:center;gap:8px">
+      <a href="{{ phoneHref }}" onClick="{{ openCall }}" aria-label="Call Inside Cars" style="width:40px;height:40px;border:1px solid #4a3f31;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#c9a06a;font-size:17px">â˜Ž</a>
+      <button onClick="{{ toggleNav }}" aria-label="Menu" style="width:40px;height:40px;background:none;border:1px solid #4a3f31;border-radius:3px;color:#f2ece2;font-size:18px;display:flex;align-items:center;justify-content:center">â˜°</button>
+    </div>
+    </sc-if>
+  </div>
+  <sc-if value="{{ mobileNavOpen }}">
+  <div style="border-top:1px solid #2d251d;background:#17130f;padding:10px clamp(18px,5vw,44px) 20px;display:flex;flex-direction:column">
+    <sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5">
+      <button onClick="{{ n.click }}" style="text-align:left;background:none;border:none;padding:14px 2px;color:#e7dfd1;font-size:16px;font-weight:500;border-bottom:1px solid #221c14">{{ n.label }}</button>
+    </sc-for>
+    <button onClick="{{ goContact }}" style="margin-top:14px;background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:15px;padding:14px;border-radius:2px">Get a Quote</button>
+  </div>
+  </sc-if>
+</header>
+
+<main style="max-width:100%;overflow:hidden">
+
+<!-- ===================== HOME ===================== -->
+<sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+<div>
+  <section style="position:relative;min-height:min(88vh,760px);display:flex;align-items:flex-end;padding:0">
+    <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1759578329565-62c723a727eb?auto=format&fit=crop&q=75&w=2000') center/cover no-repeat"></div>
+    <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,19,15,.5) 0%,rgba(23,19,15,.32) 45%,rgba(23,19,15,.95) 100%)"></div>
+    <div style="position:relative;max-width:1240px;margin:0 auto;width:100%;padding:0 clamp(18px,4vw,44px) clamp(46px,7vw,90px)">
+      <div style="display:flex;align-items:center;gap:14px;margin-bottom:22px;flex-wrap:wrap">
+        <span style="display:inline-flex;align-items:center;gap:9px;background:rgba(18,16,12,.55);border:1px solid #3a3129;padding:7px 13px;border-radius:3px;backdrop-filter:blur(4px)">
+          <svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg>
+          <span style="color:#f2ece2;font-weight:700;font-size:14px">4.6</span>
+          <span style="color:#c9a06a;font-size:13px;letter-spacing:.04em">â˜…â˜…â˜…â˜…<span style="opacity:.4">â˜…</span></span>
+          <span style="font-size:12.5px;color:#a89a86">36 reviews</span>
+        </span>
+        <span style="font-size:13px;color:#cbc1b1">Melbourne's Eastern Suburbs</span>
+      </div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(40px,6.4vw,86px);line-height:1.02;margin:0;max-width:16ch;letter-spacing:-.01em">Expert Car Upholstery &amp; Motor Trimming</h1>
+      <p style="max-width:56ch;color:#cbc1b1;font-size:clamp(16px,1.5vw,19px);line-height:1.6;margin:22px 0 34px">Sagging roof linings, torn seats, cracked leather and full custom interiors â€” restored by hand in our Bayswater workshop. Real craftsmanship for daily drivers, utes and classics across Melbourne's east.</p>
+      <div style="display:flex;flex-wrap:wrap;gap:14px">
+        <button onClick="{{ goContact }}" style="background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:15px;padding:15px 28px;border-radius:2px;transition:background .18s" style-hover="background:#dcb87e">Send a Photo, Get a Quote</button>
+        <button onClick="{{ goGallery }}" style="background:none;color:#f2ece2;border:1px solid #4a3f31;font-weight:600;font-size:15px;padding:15px 28px;border-radius:2px;transition:border-color .18s" style-hover="border-color:#c9a06a">See Our Work</button>
+      </div>
+    </div>
+  </section>
+
+  <div style="border-top:1px solid #2d251d;border-bottom:1px solid #2d251d;background:#1b1610">
+    <div style="max-width:1240px;margin:0 auto;padding:26px clamp(18px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:22px">
+      <sc-for list="{{ trustStats }}" as="s" hint-placeholder-count="4">
+        <div><div style="font-family:'Cormorant Garamond',serif;font-size:34px;color:#dcb87e;line-height:1">{{ s.big }}</div><div style="display:flex;align-items:center;gap:6px;margin-top:4px"><sc-if value="{{ s.logo }}"><svg width="14" height="14" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></sc-if><span style="color:#a89a86;font-size:13px">{{ s.label }}</span></div></div>
+      </sc-for>
+    </div>
+  </div>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px)">
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:44px">
+      <div>
+        <div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">What We Do</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,50px);margin:0;line-height:1.05">Trimming &amp; upholstery,<br>done properly.</h2>
+      </div>
+      <button onClick="{{ goServices }}" style="background:none;color:#dcb87e;border:none;font-weight:600;font-size:14px;padding:0">All services â†’</button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:#2d251d;border:1px solid #2d251d">
+      <sc-for list="{{ services }}" as="sv" hint-placeholder-count="6">
+        <button onClick="{{ goServices }}" style="text-align:left;background:#1c1710;border:none;padding:0;transition:background .2s;display:flex;flex-direction:column;min-height:280px" style-hover="background:#221c14">
+          <div style="aspect-ratio:16/10;position:relative;overflow:hidden">
+            <div style="{{ sv.bg }}"></div>
+          </div>
+          <div style="padding:22px 26px 26px;display:flex;flex-direction:column;gap:10px;flex:1">
+            <span style="font-family:ui-monospace,monospace;font-size:12px;color:#c9a06a">{{ sv.no }}</span>
+            <span style="font-family:'Cormorant Garamond',serif;font-size:24px;color:#f2ece2;line-height:1.1">{{ sv.name }}</span>
+            <span style="color:#a89a86;font-size:14px;line-height:1.55;flex:1">{{ sv.tagline }}</span>
+            <span style="color:#8a7f6f;font-size:13px;font-weight:600">Learn more â†’</span>
+          </div>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <sc-if value="{{ stitch }}"><div style="max-width:1240px;margin:0 auto;border-top:1.5px dashed #3a3129;height:0"></div></sc-if>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,5vw,72px);align-items:center">
+    <div style="aspect-ratio:4/5;position:relative;border:1px solid #2d251d;overflow:hidden">
+      <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1657779913133-45e8414370d8?auto=format&fit=crop&q=72&w=1100') center/cover no-repeat"></div>
+    </div>
+    <div>
+      <div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">Why Inside Cars</div>
+      <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.6vw,46px);margin:0 0 22px;line-height:1.08">One tradesman, every stitch â€” no production line.</h2>
+      <p style="color:#cbc1b1;font-size:16.5px;line-height:1.65;margin:0 0 18px">Every job comes through Adam's hands, from the first inspection to the final panel. That means honest advice on whether a repair or a full retrim is the right call, materials matched to how you use the car, and finish work that holds up.</p>
+      <div style="display:flex;flex-direction:column;gap:14px;margin-top:26px">
+        <sc-for list="{{ whyPoints }}" as="w" hint-placeholder-count="4">
+          <div style="display:flex;gap:14px;align-items:flex-start"><span style="color:#c9a06a;margin-top:2px">â—†</span><div><div style="font-weight:600;font-size:15px">{{ w.h }}</div><div style="color:#a89a86;font-size:14px;line-height:1.5">{{ w.p }}</div></div></div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="background:#1b1610;border-top:1px solid #2d251d;border-bottom:1px solid #2d251d">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px)">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-bottom:40px">
+        <div><div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">Featured Work</div><h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,50px);margin:0">Recent projects</h2></div>
+        <button onClick="{{ goGallery }}" style="background:none;color:#dcb87e;border:none;font-weight:600;font-size:14px;padding:0">Full gallery â†’</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+        <sc-for list="{{ featured }}" as="p" hint-placeholder-count="3">
+          <button onClick="{{ goGallery }}" style="text-align:left;background:none;border:none;padding:0;display:flex;flex-direction:column">
+            <div style="aspect-ratio:4/3;position:relative;border:1px solid #2d251d;overflow:hidden">
+              <div style="{{ p.bg }}" style-hover="transform:scale(1.04)"></div>
+            </div>
+            <div style="padding:16px 2px 0"><div style="font-family:ui-monospace,monospace;font-size:11px;color:#c9a06a;letter-spacing:.05em;margin-bottom:6px">{{ p.service }}</div><div style="font-family:'Cormorant Garamond',serif;font-size:21px;line-height:1.15">{{ p.title }}</div></div>
+          </button>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px)">
+    <div style="text-align:center;margin-bottom:44px"><div style="display:inline-flex;align-items:center;gap:9px;margin-bottom:16px"><svg width="20" height="20" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:#f2ece2;font-weight:700;font-size:16px">4.6</span><span style="color:#c9a06a;letter-spacing:.04em">â˜…â˜…â˜…â˜…<span style="opacity:.4">â˜…</span></span><span style="color:#a89a86;font-size:14px">Â· 36 Google reviews</span></div><h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,50px);margin:0">What customers say</h2></div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+      <sc-for list="{{ reviews }}" as="r" hint-placeholder-count="3">
+        <div style="background:#1c1710;border:1px solid #2d251d;padding:28px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:center;justify-content:space-between"><span style="color:#c9a06a;font-size:14px;letter-spacing:.06em">{{ r.stars }}</span><svg width="18" height="18" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg></div>
+          <p style="margin:0;color:#e7dfd1;font-size:15.5px;line-height:1.6;flex:1">"{{ r.text }}"</p>
+          <div style="border-top:1px solid #2d251d;padding-top:14px"><div style="font-weight:600;font-size:14px">{{ r.name }}</div><div style="color:#8a7f6f;font-size:12.5px">{{ r.meta }}</div></div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section style="background:#1b1610;border-top:1px solid #2d251d">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,100px) clamp(18px,4vw,44px)">
+      <div style="text-align:center;margin-bottom:40px"><div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">Trusted Partners</div><h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,50px);margin:0">Businesses we work with</h2></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:22px">
+        <div style="border:1px solid #2d251d;background:#1a150f;display:flex;flex-direction:column">
+          <div style="aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid #2d251d">
+            <div style="position:absolute;inset:0;background:url('DSC00522 (1).jpg') center/cover no-repeat"></div>
+          </div>
+          <div style="padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;flex:1">
+            <img src="Screenshot 2026-07-18 110121.png" alt="Mirror Finish Detail logo" style="height:38px;width:auto;align-self:flex-start;margin-bottom:16px;border-radius:3px">
+            <div style="font-family:ui-monospace,monospace;font-size:11px;color:#c9a06a;letter-spacing:.06em;margin-bottom:10px">Car Detailing Â· Wantirna South, VIC</div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(23px,2.6vw,30px);margin:0 0 14px;line-height:1.1">Mirror Finish Detail</h3>
+            <p style="color:#cbc1b1;font-size:15px;line-height:1.65;margin:0 0 22px;flex:1">Professional car detailing, paint correction and protective coatings in Wantirna South. When a fresh interior deserves a finish to match, we point our customers straight to the team at Mirror Finish Detail â€” and they send theirs to us.</p>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:#f2ece2;font-weight:700;font-size:14px">4.9</span><span style="color:#c9a06a;font-size:13px;letter-spacing:.04em">â˜…â˜…â˜…â˜…â˜…</span><span style="color:#a89a86;font-size:12.5px">149 Google reviews</span></div>
+            <a href="https://mirrorfinishdetail.com.au" target="_blank" rel="noopener" style="align-self:flex-start;background:none;color:#dcb87e;border:1px solid #4a3f31;font-weight:600;font-size:14px;padding:11px 20px;border-radius:2px;transition:border-color .18s" style-hover="border-color:#c9a06a">Visit Mirror Finish Detail â†’</a>
+          </div>
+        </div>
+        <div style="border:1px solid #2d251d;background:#1a150f;display:flex;flex-direction:column">
+          <div style="aspect-ratio:16/10;position:relative;overflow:hidden;border-bottom:1px solid #2d251d">
+            <div style="position:absolute;inset:0;background:url('DSC01048.jpg') center/cover no-repeat"></div>
+          </div>
+          <div style="padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;flex:1">
+            <img src="Screenshot 2026-07-18 110115.png" alt="Apex Tuning logo" style="height:38px;width:auto;align-self:flex-start;margin-bottom:16px;border-radius:3px">
+            <div style="font-family:ui-monospace,monospace;font-size:11px;color:#c9a06a;letter-spacing:.06em;margin-bottom:10px">Performance Tuning Â· Melbourne, VIC</div>
+            <h3 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(23px,2.6vw,30px);margin:0 0 14px;line-height:1.1">Apex Tuning</h3>
+            <p style="color:#cbc1b1;font-size:15px;line-height:1.65;margin:0 0 22px;flex:1">Performance tuning, dyno work and ECU remapping done properly. For customers chasing more from their car under the bonnet as well as inside it, Apex Tuning is who we trust â€” and they send their clients our way for the interior.</p>
+            <div style="display:flex;align-items:center;gap:8px;margin-bottom:20px"><svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:#f2ece2;font-weight:700;font-size:14px">4.9</span><span style="color:#c9a06a;font-size:13px;letter-spacing:.04em">â˜…â˜…â˜…â˜…â˜…</span><span style="color:#a89a86;font-size:12.5px">98 Google reviews</span></div>
+            <a href="https://apextuning.com.au/" target="_blank" rel="noopener" style="align-self:flex-start;background:none;color:#dcb87e;border:1px solid #4a3f31;font-weight:600;font-size:14px;padding:11px 20px;border-radius:2px;transition:border-color .18s" style-hover="border-color:#c9a06a">Visit Apex Tuning â†’</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <sc-if value="{{ showMap }}">
+  <section style="background:#1b1610;border-top:1px solid #2d251d">
+    <div style="max-width:1240px;margin:0 auto;padding:clamp(56px,8vw,96px) clamp(18px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,5vw,64px);align-items:center">
+      <div>
+        <div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">Service Area</div>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(28px,3.6vw,44px);margin:0 0 18px;line-height:1.1">Bayswater &amp; the eastern suburbs</h2>
+        <p style="color:#cbc1b1;font-size:16px;line-height:1.6;margin:0 0 22px">Based at 9 John St, Bayswater â€” an easy run from right across Knox and Maroondah.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+          <sc-for list="{{ suburbs }}" as="sb" hint-placeholder-count="12"><span style="border:1px solid #3a3129;color:#cbc1b1;font-size:13px;padding:6px 13px;border-radius:2px">{{ sb }}</span></sc-for>
+        </div>
+      </div>
+      <div style="aspect-ratio:5/4;position:relative;border:1px solid #2d251d;overflow:hidden">
+        <div style="position:absolute;inset:0;background:url('Melbourne-South-East-Map1.1.png') center/cover no-repeat"></div>
+      </div>
+    </div>
+  </section>
+  </sc-if>
+
+  <section style="max-width:900px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px)">
+    <div style="text-align:center;margin-bottom:40px"><div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:14px">Common Questions</div><h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4vw,48px);margin:0">Good to know</h2></div>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+        <div style="border-top:1px solid #2d251d">
+          <button onClick="{{ f.toggle }}" style="width:100%;text-align:left;background:none;border:none;padding:22px 4px;display:flex;justify-content:space-between;gap:20px;align-items:center;color:#f2ece2"><span style="font-size:17px;font-weight:500">{{ f.q }}</span><span style="color:#c9a06a;font-size:22px;flex-shrink:0">{{ f.sign }}</span></button>
+          <sc-if value="{{ f.open }}"><div style="padding:0 4px 24px;color:#b3a794;font-size:15.5px;line-height:1.65;max-width:70ch">{{ f.a }}</div></sc-if>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ===================== SERVICES ===================== -->
+<sc-if value="{{ isServices }}">
+<div>
+  <div style="border-bottom:1px solid #2d251d;background:#1b1610"><div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,4vw,44px)"><div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:16px">Our Services</div><h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.5vw,72px);margin:0 0 18px;line-height:1.03;max-width:18ch">Every kind of trim work, under one roof</h1><p style="color:#cbc1b1;font-size:17px;line-height:1.6;max-width:60ch;margin:0">From an urgent sagging headliner to a ground-up classic retrim â€” here's how each job is approached, and the materials behind it.</p></div></div>
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(40px,6vw,72px) clamp(18px,4vw,44px);display:flex;flex-direction:column;gap:1px;background:#2d251d;border:1px solid #2d251d">
+    <sc-for list="{{ serviceDetail }}" as="sv" hint-placeholder-count="7">
+      <div style="background:#1a150f;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(24px,4vw,56px);align-items:center">
+        <div>
+          <div style="display:flex;align-items:baseline;gap:14px;margin-bottom:16px"><span style="font-family:ui-monospace,monospace;font-size:13px;color:#c9a06a">{{ sv.no }}</span><h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3vw,38px);margin:0;line-height:1.05">{{ sv.name }}</h2></div>
+          <p style="color:#cbc1b1;font-size:15.5px;line-height:1.65;margin:0 0 18px">{{ sv.desc }}</p>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px"><sc-for list="{{ sv.tags }}" as="t" hint-placeholder-count="3"><span style="border:1px solid #3a3129;color:#a89a86;font-size:12.5px;padding:5px 11px;border-radius:2px">{{ t }}</span></sc-for></div>
+          <button onClick="{{ goContact }}" style="background:none;color:#dcb87e;border:1px solid #4a3f31;font-weight:600;font-size:14px;padding:11px 20px;border-radius:2px;transition:border-color .18s" style-hover="border-color:#c9a06a">Quote this job â†’</button>
+        </div>
+        <div style="aspect-ratio:4/3;position:relative;border:1px solid #2d251d;overflow:hidden">
+          <div style="{{ sv.bg }}"></div>
+          <sc-if value="{{ sv.ph }}"><span style="position:absolute;left:14px;bottom:14px;font-family:ui-monospace,monospace;font-size:11px;color:#8a7f6f;background:rgba(23,19,15,.62);padding:5px 9px;border-radius:2px">{{ sv.phLabel }}</span></sc-if>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+</div>
+</sc-if>
+
+<!-- ===================== ABOUT ===================== -->
+<sc-if value="{{ isAbout }}">
+<div>
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,96px) clamp(18px,4vw,44px);display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(30px,5vw,72px);align-items:center">
+    <div>
+      <div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:16px">About</div>
+      <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5vw,68px);margin:0 0 22px;line-height:1.03">Meet Adam</h1>
+      <p style="color:#cbc1b1;font-size:17px;line-height:1.68;margin:0 0 16px">Adam has spent his working life behind a trimming machine â€” learning the trade the old way, then building Inside Cars into a workshop customers travel across Melbourne's east to reach.</p>
+      <p style="color:#cbc1b1;font-size:16px;line-height:1.68;margin:0">He's worked on everything from tired daily commuters to concours classics, and he treats each the same: understand how the owner uses the car, choose materials that suit it, and finish every panel by hand. No shortcuts, no outsourcing.</p>
+    </div>
+    <div style="aspect-ratio:4/5;position:relative;border:1px solid #2d251d;overflow:hidden"><div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1652860316277-370ca5b1b1df?auto=format&fit=crop&q=72&w=1100') center/cover no-repeat"></div></div>
+  </section>
+
+  <section style="background:#1b1610;border-top:1px solid #2d251d;border-bottom:1px solid #2d251d"><div style="max-width:1000px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,4vw,44px)">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(26px,3.4vw,42px);margin:0 0 40px;text-align:center">A life in the trade</h2>
+    <div style="display:flex;flex-direction:column">
+      <sc-for list="{{ timeline }}" as="tl" hint-placeholder-count="4"><div style="display:grid;grid-template-columns:120px 1fr;gap:24px;padding:22px 0;border-top:1px solid #2d251d"><div style="font-family:ui-monospace,monospace;color:#c9a06a;font-size:14px">{{ tl.year }}</div><div><div style="font-weight:600;font-size:17px;margin-bottom:5px">{{ tl.h }}</div><div style="color:#a89a86;font-size:15px;line-height:1.6">{{ tl.p }}</div></div></div></sc-for>
+    </div>
+  </div></section>
+
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,88px) clamp(18px,4vw,44px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px">
+      <sc-for list="{{ credentials }}" as="c" hint-placeholder-count="3"><div style="border:1px solid #2d251d;padding:28px"><div style="color:#c9a06a;font-size:22px;margin-bottom:12px">{{ c.icon }}</div><div style="font-weight:600;font-size:17px;margin-bottom:8px">{{ c.h }}</div><div style="color:#a89a86;font-size:14.5px;line-height:1.6">{{ c.p }}</div></div></sc-for>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ===================== GALLERY ===================== -->
+<sc-if value="{{ isGallery }}">
+<div>
+  <div style="border-bottom:1px solid #2d251d;background:#1b1610"><div style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,80px) clamp(18px,4vw,44px)"><div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:16px">Portfolio</div><h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.5vw,72px);margin:0 0 16px;line-height:1.03">Our work, up close</h1><p style="color:#cbc1b1;font-size:17px;line-height:1.6;max-width:58ch;margin:0">Real jobs from the Bayswater bench. Filter by the kind of work you're after.</p></div></div>
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(32px,4vw,52px) clamp(18px,4vw,44px)">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:34px">
+      <sc-for list="{{ galleryFilters }}" as="gf" hint-placeholder-count="6"><button onClick="{{ gf.click }}" style="border:1px solid {{ gf.border }};background:{{ gf.bg }};color:{{ gf.color }};font-size:13.5px;font-weight:600;padding:9px 17px;border-radius:2px;transition:all .15s">{{ gf.label }}</button></sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:22px">
+      <sc-for list="{{ galleryItems }}" as="g" hint-placeholder-count="9">
+        <div style="display:flex;flex-direction:column;border:1px solid #2d251d;background:#1a150f">
+          <div style="aspect-ratio:4/3;position:relative;overflow:hidden"><div style="{{ g.bg }}"></div></div>
+          <div style="padding:18px"><div style="font-family:ui-monospace,monospace;font-size:11px;color:#c9a06a;letter-spacing:.05em;margin-bottom:7px">{{ g.tag }}</div><div style="font-family:'Cormorant Garamond',serif;font-size:22px;line-height:1.15;margin-bottom:8px">{{ g.title }}</div><div style="color:#a89a86;font-size:14px;line-height:1.55">{{ g.blurb }}</div></div>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+</div>
+</sc-if>
+
+<!-- ===================== CONTACT ===================== -->
+<sc-if value="{{ isContact }}">
+<div>
+  <section style="max-width:1240px;margin:0 auto;padding:clamp(48px,7vw,80px) clamp(18px,4vw,44px) clamp(20px,3vw,32px)">
+    <div style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600;margin-bottom:16px">Contact</div>
+    <h1 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(38px,5.5vw,72px);margin:0 0 16px;line-height:1.03">Get in touch</h1>
+    <p style="color:#cbc1b1;font-size:17px;line-height:1.6;max-width:60ch;margin:0">Fastest quote is a photo. Fill in the form below, or call the workshop during opening hours.</p>
+  </section>
+  <section style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px">
+    <sc-for list="{{ contactCards }}" as="cc" hint-placeholder-count="3"><div style="border:1px solid #2d251d;padding:26px"><div style="color:#c9a06a;font-size:20px;margin-bottom:12px">{{ cc.icon }}</div><div style="font-weight:600;font-size:15px;margin-bottom:8px">{{ cc.h }}</div><div style="color:#cbc1b1;font-size:15px;line-height:1.6;white-space:pre-line">{{ cc.p }}</div></div></sc-for>
+  </section>
+  <section style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px) clamp(24px,4vw,48px)">
+    <div style="aspect-ratio:24/9;position:relative;border:1px solid #2d251d"><div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#251e17,#251e17 14px,#201a13 14px,#201a13 28px);display:flex;align-items:center;justify-content:center"><span style="font-family:ui-monospace,monospace;font-size:11px;color:#8a7f6f;background:rgba(23,19,15,.6);padding:5px 10px;border-radius:2px">Embedded Google Map â€” 9 John St, Bayswater VIC 3153</span></div></div>
+  </section>
+</div>
+</sc-if>
+
+</main>
+
+<!-- ===================== SITEWIDE QUOTE FORM ===================== -->
+<section id="quote" style="background:#1b1610;border-top:1px solid #2d251d">
+  <div style="max-width:1000px;margin:0 auto;padding:clamp(56px,8vw,104px) clamp(18px,4vw,44px)">
+    <div style="text-align:center;margin-bottom:14px"><span style="color:#c9a06a;font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:600">Free Quote</span></div>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:600;font-size:clamp(30px,4.4vw,54px);margin:0 0 14px;text-align:center;line-height:1.05">Get a Quote â€” Send Us a Photo</h2>
+    <p style="text-align:center;color:#cbc1b1;font-size:16px;line-height:1.6;max-width:56ch;margin:0 auto 44px">A photo of the damage is the fastest way to a real quote â€” Adam usually gets back to you within one business day.</p>
+
+    <sc-if value="{{ submitted }}">
+      <div style="border:1px solid #4a3f31;background:#1c1710;padding:48px 32px;text-align:center;animation:fadeUp .4s ease">
+        <div style="font-size:40px;color:#c9a06a;margin-bottom:16px">âœ“</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;margin-bottom:10px">Thanks â€” that's landed.</div>
+        <p style="color:#cbc1b1;font-size:16px;line-height:1.6;max-width:44ch;margin:0 auto 24px">Adam will get back to you within one business day. If it's urgent, give the workshop a call.</p>
+        <button onClick="{{ resetForm }}" style="background:none;color:#dcb87e;border:1px solid #4a3f31;font-weight:600;font-size:14px;padding:11px 22px;border-radius:2px">Send another â†’</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+    <form onSubmit="{{ submit }}" style="display:flex;flex-direction:column;gap:20px">
+      <div style="position:absolute;left:-9999px" aria-hidden="true"><input type="text" tabindex="-1" autocomplete="off" value="{{ f.company }}" onChange="{{ onCompany }}"></div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px">
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">Name *</span><input required value="{{ f.name }}" onChange="{{ onName }}" placeholder="Your name" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none" style-focus="border-color:#c9a06a"></label>
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">Phone *</span><input required type="tel" value="{{ f.phone }}" onChange="{{ onPhone }}" placeholder="Mobile number" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none" style-focus="border-color:#c9a06a"></label>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:20px">
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">Email <span style="color:#8a7f6f;font-weight:400">(optional)</span></span><input type="email" value="{{ f.email }}" onChange="{{ onEmail }}" placeholder="you@email.com" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none" style-focus="border-color:#c9a06a"></label>
+        <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">Suburb <span style="color:#8a7f6f;font-weight:400">(optional)</span></span><input value="{{ f.suburb }}" onChange="{{ onSuburb }}" placeholder="e.g. Ringwood" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none" style-focus="border-color:#c9a06a"></label>
+      </div>
+      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">Vehicle make, model &amp; year</span><input value="{{ f.vehicle }}" onChange="{{ onVehicle }}" placeholder="e.g. 2011 Ford Territory" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none" style-focus="border-color:#c9a06a"></label>
+      <label style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;font-weight:600;color:#cbc1b1">What needs doing?</span><textarea value="{{ f.desc }}" onChange="{{ onDesc }}" rows="4" placeholder="e.g. roof lining sagging at the back, or full custom retrim" style="background:#12100c;border:1px solid #3a3129;color:#f2ece2;font-size:15px;padding:13px 15px;border-radius:2px;outline:none;resize:vertical;line-height:1.5" style-focus="border-color:#c9a06a"></textarea></label>
+
+      <div>
+        <div style="font-size:13px;font-weight:600;color:#cbc1b1;margin-bottom:8px">Photos of the damage <span style="color:#8a7f6f;font-weight:400">â€” helps us quote faster (up to 5)</span></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="0"><div style="position:relative;width:96px;height:96px;border:1px solid #3a3129;border-radius:2px;overflow:hidden;background:#12100c"><div style="{{ ph.style }}"></div><button type="button" onClick="{{ ph.remove }}" style="position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(23,19,15,.85);color:#f2ece2;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center">Ã—</button></div></sc-for>
+          <sc-if value="{{ canAddPhotos }}" hint-placeholder-val="{{ true }}"><label style="width:96px;height:96px;border:1.5px dashed #4a3f31;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#8a7f6f;transition:border-color .15s" style-hover="border-color:#c9a06a"><span style="font-size:24px;line-height:1;color:#c9a06a">ï¼‹</span><span style="font-size:11px">Add photo</span><input type="file" accept="image/*" multiple capture="environment" onChange="{{ handleFiles }}" style="display:none"></label></sc-if>
+        </div>
+        <div style="font-size:12px;color:#8a7f6f;margin-top:8px">Photos are resized on your device before sending â€” big phone photos are fine.</div>
+      </div>
+
+      <button type="submit" style="align-self:flex-start;background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:15px;padding:15px 32px;border-radius:2px;transition:background .18s;margin-top:6px" style-hover="background:#dcb87e">Send Enquiry</button>
+      <div style="font-size:12px;color:#8a7f6f">By sending you agree to be contacted about your enquiry. We never share your details.</div>
+    </form>
+    </sc-if>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer style="background:#12100c;border-top:1px solid #2d251d">
+  <div style="max-width:1240px;margin:0 auto;padding:clamp(48px,6vw,72px) clamp(18px,4vw,44px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:36px">
+      <div>
+        <div style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:24px;margin-bottom:14px">Inside Cars</div>
+        <p style="color:#a89a86;font-size:14.5px;line-height:1.6;margin:0 0 18px;max-width:32ch">Auto upholstery &amp; motor trimming, handcrafted in Bayswater for Melbourne's eastern suburbs.</p>
+        <div style="display:flex;align-items:center;gap:8px"><svg width="16" height="16" viewBox="0 0 48 48"><path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/><path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/><path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/><path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/></svg><span style="color:#c9a06a;font-weight:600;font-size:14px">â˜…â˜…â˜…â˜…<span style="opacity:.45">â˜…</span></span> <span style="color:#a89a86;font-weight:400;font-size:13.5px">4.6 Â· 36 Google reviews</span></div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a7f6f;margin-bottom:16px">Services</div>
+        <div style="display:flex;flex-direction:column;gap:10px"><sc-for list="{{ footerServices }}" as="fs" hint-placeholder-count="6"><button onClick="{{ goServices }}" style="background:none;border:none;padding:0;text-align:left;color:#cbc1b1;font-size:14px" style-hover="color:#f2ece2">{{ fs }}</button></sc-for></div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a7f6f;margin-bottom:16px">Explore</div>
+        <div style="display:flex;flex-direction:column;gap:10px"><sc-for list="{{ navItems }}" as="n" hint-placeholder-count="5"><button onClick="{{ n.click }}" style="background:none;border:none;padding:0;text-align:left;color:#cbc1b1;font-size:14px" style-hover="color:#f2ece2">{{ n.label }}</button></sc-for></div>
+      </div>
+      <div>
+        <div style="font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#8a7f6f;margin-bottom:16px">Visit &amp; Call</div>
+        <div style="color:#cbc1b1;font-size:14.5px;line-height:1.7">9 John St<br>Bayswater VIC 3153</div>
+        <a href="{{ phoneHref }}" onClick="{{ openCall }}" style="display:inline-block;margin-top:12px;color:#f2ece2;font-weight:600;font-size:15px">{{ phone }}</a>
+        <a href="mailto:ajfairbrother@outlook.com" style="display:block;margin-top:8px;color:#cbc1b1;font-size:14px">ajfairbrother@outlook.com</a>
+        <div style="color:#a89a86;font-size:13.5px;line-height:1.7;margin-top:14px">Monâ€“Fri 8amâ€“5pm<br>Sat 9amâ€“12pm</div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #2d251d;margin-top:44px;padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;color:#7d7261;font-size:12.5px">
+      <span>Â© {{ year }} Inside Cars Â· ABN 21 256 240 174</span>
+      <span>Privacy Policy Â· Terms Â· Bayswater, VIC</span>
+    </div>
+  </div>
+</footer>
+
+<sc-if value="{{ showCall }}"><a href="{{ phoneHref }}" onClick="{{ openCall }}" aria-label="Call Inside Cars" style="position:fixed;right:18px;bottom:18px;z-index:60;background:#c9a06a;color:#17130f;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:24px;box-shadow:0 6px 20px rgba(0,0,0,.4)">â˜Ž</a></sc-if>
+
+<sc-if value="{{ callOpen }}">
+<div onClick="{{ closeCall }}" style="position:fixed;inset:0;z-index:200;background:rgba(12,10,8,.72);backdrop-filter:blur(3px);display:flex;align-items:center;justify-content:center;padding:22px">
+  <div style="background:#1c1710;border:1px solid #3a3129;border-radius:4px;max-width:380px;width:100%;padding:32px 28px;text-align:center;animation:fadeUp .28s ease">
+    <div style="width:52px;height:52px;margin:0 auto 18px;border-radius:50%;background:rgba(201,160,106,.14);border:1px solid #4a3f31;display:flex;align-items:center;justify-content:center;color:#c9a06a;font-size:24px">â˜Ž</div>
+    <div style="font-family:'Cormorant Garamond',serif;font-size:24px;line-height:1.2;margin-bottom:12px">Calling Adam at Inside Cars</div>
+    <p style="color:#cbc1b1;font-size:15.5px;line-height:1.6;margin:0 0 26px">If we don't pick up right away, please leave a text and I'll call you back as soon as possible.</p>
+    <div style="display:flex;flex-direction:column;gap:10px">
+      <a href="{{ phoneHref }}" onClick="{{ dialNow }}" style="background:#c9a06a;color:#17130f;font-weight:700;font-size:15px;padding:14px;border-radius:2px">Call {{ phone }}</a>
+      <button onClick="{{ closeCall }}" style="background:none;color:#a89a86;border:none;font-size:14px;font-weight:500;padding:8px">Cancel</button>
+    </div>
+  </div>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:880},&quot;showStitching&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showServiceAreaMap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showFloatingCall&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
+class Component extends DCLogic {
+  state = {
+    page: 'home', galleryFilter: 'all', openFaq: 0, submitted: false, photos: [],
+    form: { name:'', phone:'', email:'', suburb:'', vehicle:'', desc:'', company:'' },
+    mobileNavOpen: false, vw: (typeof window!=='undefined' ? window.innerWidth : 1200),
+    callOpen: false
+  };
+
+  openCall(e){ if (e) e.preventDefault(); this.setState({ callOpen: true, mobileNavOpen: false }); }
+  closeCall(){ this.setState({ callOpen: false }); }
+  dialNow(){ this.setState({ callOpen: false }); if (typeof window!=='undefined') window.location.href = 'tel:+61398000003'; }
+
+  componentDidMount(){ this._onResize = () => this.setState({ vw: window.innerWidth }); window.addEventListener('resize', this._onResize); this._onResize(); }
+  componentWillUnmount(){ if (this._onResize) window.removeEventListener('resize', this._onResize); }
+  toggleNav(){ this.setState(s => ({ mobileNavOpen: !s.mobileNavOpen })); }
+
+  go(p){ this.setState({ page: p, mobileNavOpen: false }); if (typeof window!=='undefined') window.scrollTo({top:0}); }
+  setField(k){ return e => this.setState(s => ({ form: { ...s.form, [k]: e.target.value } })); }
+
+  compress(file){
+    return new Promise(res => {
+      const img = new Image();
+      img.onload = () => {
+        const max = 1600; let { width:w, height:h } = img;
+        if (w>max || h>max){ if (w>h){ h=Math.round(h*max/w); w=max; } else { w=Math.round(w*max/h); h=max; } }
+        const c = document.createElement('canvas'); c.width=w; c.height=h;
+        c.getContext('2d').drawImage(img,0,0,w,h);
+        res(c.toDataURL('image/jpeg',0.8));
+      };
+      img.onerror = () => res(null);
+      img.src = URL.createObjectURL(file);
+    });
+  }
+  async handleFiles(e){
+    const room = 5 - this.state.photos.length;
+    const files = [...e.target.files].slice(0, Math.max(0,room));
+    const out = [];
+    for (const f of files){ const url = await this.compress(f); if (url) out.push({ url }); }
+    this.setState(s => ({ photos: [...s.photos, ...out].slice(0,5) }));
+    e.target.value = '';
+  }
+  removePhoto(i){ this.setState(s => ({ photos: s.photos.filter((_,x)=>x!==i) })); }
+
+  submit(e){
+    e.preventDefault();
+    if (this.state.form.company) return; // honeypot
+    try { window.gtag && window.gtag('event','generate_lead'); } catch(_){}
+    this.setState({ submitted: true });
+    if (typeof window!=='undefined') { const el=document.getElementById('quote'); if(el) window.scrollTo({top: el.offsetTop-60}); }
+  }
+  reset(){ this.setState({ submitted:false, photos:[], form:{ name:'',phone:'',email:'',suburb:'',vehicle:'',desc:'',company:'' } }); }
+
+  renderVals(){
+    const page = this.state.page;
+    const U = id => `https://images.unsplash.com/photo-${id}?auto=format&fit=crop&q=70&w=1100`;
+    const bgStyle = id => `position:absolute;inset:0;background:linear-gradient(rgba(20,16,12,.12),rgba(20,16,12,.52)),url('${U(id)}') center/cover no-repeat;transition:transform .4s`;
+    const ROOF = 'P1-HL675-CHAR-CL.jpg';
+    const WHEEL = 'E60-M5-E63-M6-Black-alcantara-9040-on-sides-Smooth-leather-top-bottom-M-stitching-1.jpg';
+    const SEAT = 'DSC01114.jpg';
+    const bgLocal = url => `position:absolute;inset:0;background:linear-gradient(rgba(20,16,12,.08),rgba(20,16,12,.3)),url('${url}') center/cover no-repeat;transition:transform .4s`;
+    const featImg = ['1683907993207-7e0abe4f9009','1752883749118-1c7a9d1db078','1657779913133-45e8414370d8'];
+    const svImg = ['1752883749118-1c7a9d1db078','1657779913133-45e8414370d8','1652860316277-370ca5b1b1df','1759578329565-62c723a727eb','1683907993207-7e0abe4f9009','1746226389291-3db09df91d9b','1652967786801-1b6ba8a00075'];
+    const pill = active => active
+      ? { border:'#c9a06a', bg:'#c9a06a', color:'#17130f' }
+      : { border:'#3a3129', bg:'transparent', color:'#cbc1b1' };
+
+    const services = [
+      { no:'01', name:'Roof Lining Repair', tagline:'Sagging headliner drooping onto your head? The most common fix we do â€” reskinned properly.' },
+      { no:'02', name:'Car Seat Repair & Retrim', tagline:'Torn seams, collapsed bolsters, worn bases â€” repaired or fully retrimmed.' },
+      { no:'03', name:'Leather Repair & Retrim', tagline:'Cracked, faded or split leather brought back, or replaced in matched hide.' },
+      { no:'04', name:'Custom Car Interiors', tagline:'A complete interior built to your spec â€” materials, colours, stitching, the lot.' },
+      { no:'05', name:'Classic Car Restoration', tagline:'Period-correct retrims for classics and muscle cars, done to concours standard.' },
+      { no:'06', name:'Steering Wheel Retrim', tagline:'Worn or slippery wheel re-wrapped in fresh leather with a clean stitch line.' },
+      { no:'07', name:'Door Trims & Carpets', tagline:'Door cards recovered and carpets replaced to finish the interior off.' }
+    ];
+    const serviceDetail = [
+      { no:'01', name:'Roof Lining Repair', img:'Before/after â€” reskinned headliner', tags:['Sagging headliners','Reskin & replace','Same-week turnaround'],
+        desc:"The number-one repair we're asked for. When the foam backing on your headliner breaks down the fabric droops onto your head â€” glue and pins are only a temporary fix. We strip the board, remove the old material and foam, and reskin it in fresh headliner cloth so it looks factory again. Common on Territory, Commodore, Golf/Polo and plenty of Euros." },
+      { no:'02', name:'Car Seat Repair & Retrim', img:'Rebuilt driver\u2019s bolster & base', tags:['Torn seams','Bolster rebuild','Foam replacement'],
+        desc:"From a single split seam to a full set of seats, we repair what can be saved and retrim what can't. Collapsed driver's bolsters and worn bases are rebuilt with new foam so the seat supports you again, and panels are matched to the existing trim wherever possible." },
+      { no:'03', name:'Leather Repair & Retrim', img:'Colour-matched leather panel', tags:['Cracked leather','Colour match','Full hide retrim'],
+        desc:"Leather cracks, fades and splits with age and sun. Minor damage can be repaired and recoloured; where it's past saving we retrim in matched hide. We'll give you an honest call on which way is worth your money â€” sometimes a repair is all you need." },
+      { no:'04', name:'Custom Car Interiors', img:'Custom two-tone build in progress', tags:['Full retrim','Bespoke stitching','Material selection'],
+        desc:"This is where the craft really shows. A complete custom interior built around how you want the car to look and feel â€” leather or vinyl, colours, contrast stitching, perforation, piping. We work through materials with you and build the whole thing by hand." },
+      { no:'05', name:'Classic Car Restoration', img:'Period-correct classic retrim', tags:['Period-correct','Concours finish','Muscle & vintage'],
+        desc:"Classics and muscle cars deserve a retrim that respects the original. We source period-correct materials and patterns and finish to a standard that stands up at a show. From Kingswoods to Mustangs, we've got the interior covered." },
+      { no:'06', name:'Steering Wheel Retrim', img:'Fresh leather-wrapped wheel', tags:['Leather re-wrap','Contrast stitch','OEM feel'],
+        desc:"A worn, shiny or peeling wheel is the thing your hands touch most. We strip it back and re-wrap it in fresh leather with a tidy hand-stitched seam â€” optional contrast thread if you want it to stand out." },
+      { no:'07', name:'Door Trims & Carpets', img:'Recovered door cards & new carpet', tags:['Door cards','Carpet replace','Console & dash'],
+        desc:"The finishing touches that pull an interior together. Faded or damaged door cards recovered to match, worn carpets replaced, and console and dash trim tidied up so the whole cabin reads as one." }
+    ];
+    const featured = [
+      { title:'1969 Mustang â€” Full Retrim', service:'Classic Restoration', label:'Before/after â€” Mustang interior' },
+      { title:'Ford Territory â€” Roof Lining', service:'Roof Lining Repair', label:'Reskinned Territory headliner' },
+      { title:'79 Series LandCruiser â€” Seats', service:'Seat Retrim', label:'Rebuilt LandCruiser seats' }
+    ];
+    const reviews = [
+      { stars:'â˜…â˜…â˜…â˜…â˜…', text:'Roof lining in my VE Commodore was hanging down. Adam had it looking brand new in a couple of days. Came from Ringwood and worth the trip.', name:'Daniel M.', meta:'Roof lining repair Â· Ringwood' },
+      { stars:'â˜…â˜…â˜…â˜…â˜…', text:'Rebuilt the driver\u2019s seat bolster and retrimmed the lot in leather. Better than when I bought the car. True craftsman.', name:'Sophie T.', meta:'Seat retrim Â· Wantirna South' },
+      { stars:'â˜…â˜…â˜…â˜…â˜…', text:'Took my old Kingswood to Adam for a full interior. Period correct and beautifully done. Couldn\u2019t recommend him more.', name:'Rob K.', meta:'Classic restoration Â· Boronia' }
+    ];
+    const faqData = [
+      { q:'Why is my car roof lining sagging?', a:'The foam that bonds the headliner fabric to the board breaks down over time â€” usually from age and heat â€” and the fabric droops away. Glue and pins only hold briefly; the proper fix is to reskin the board with fresh material and foam.' },
+      { q:'Can torn or cracked leather seats be repaired?', a:'Often, yes. Minor cracking, small tears and faded colour can be repaired and recoloured. If the leather is badly split or worn through, retrimming the panel in matched hide is the better long-term result â€” we\u2019ll tell you honestly which suits your car.' },
+      { q:'How much does roof lining repair cost?', a:'It depends on the vehicle and headliner size, but it\u2019s one of our most affordable repairs. Send a photo through the quote form and we\u2019ll give you a real figure â€” usually the same day.' },
+      { q:'Can you quote from a photo?', a:'Absolutely â€” it\u2019s the fastest way. Snap a few photos of the damage, add your vehicle details in the form, and Adam will get back to you within a business day.' },
+      { q:'What areas do you cover?', a:'We\u2019re in Bayswater and look after all of Melbourne\u2019s eastern suburbs â€” Knox, Maroondah and beyond. Ringwood, Wantirna, Ferntree Gully, Boronia, Croydon, Rowville and the rest are all an easy run.' }
+    ];
+    const faqs = faqData.map((f,i)=>({ ...f, open: this.state.openFaq===i, sign: this.state.openFaq===i?'â€“':'+', toggle: ()=>this.setState(s=>({openFaq: s.openFaq===i?-1:i})) }));
+
+    const gAll = [
+      { title:'Mercedes Full Retrim', tag:'Classic Restoration', cat:'classic', blurb:'Ground-up interior in period-correct trim.', img:'1683907993207-7e0abe4f9009' },
+      { title:'BMW E30 Recaro Retrim', tag:'Classic Restoration', cat:'classic', blurb:'Full retrim to original pattern and colour.', img:'1759578329565-62c723a727eb' },
+      { title:'BMW E36 Roof Liner Repair', tag:'Roof Lining', cat:'roof', blurb:'Sagging headliner reskinned to factory look.', img:'1752883749118-1c7a9d1db078' },
+      { title:'Side Bolster Repair', tag:'Seat Repair', cat:'seats', blurb:'Worn driverâ€™s bolster rebuilt and recovered.', img:'1652967786801-1b6ba8a00075' },
+      { title:'Diamond Stitch Repairs', tag:'Seat Retrim', cat:'seats', blurb:'Diamond-stitch pattern rebuilt and colour-matched.', img:'1657779913133-45e8414370d8' },
+      { title:'Leather Seat Colour Match', tag:'Leather', cat:'leather', blurb:'Cracked hide repaired and recoloured.', img:'1652860316277-370ca5b1b1df' },
+      { title:'Custom Two-Tone Interior', tag:'Custom Interior', cat:'custom', blurb:'Bespoke leather build with contrast stitch.', img:'1759578329565-62c723a727eb' },
+      { title:'Steering Wheel Re-Wrap', tag:'Custom Interior', cat:'custom', blurb:'Fresh leather wheel with contrast thread.', img:'1746226389291-3db09df91d9b' },
+      { title:'Marine Bench Upholstery', tag:'Leather', cat:'leather', blurb:'Weatherproof vinyl retrim for a runabout.', img:'1652967786801-1b6ba8a00075' }
+    ];
+    const galFilters = [
+      { label:'All Work', value:'all' }, { label:'Roof Lining', value:'roof' }, { label:'Seats & Retrim', value:'seats' },
+      { label:'Leather', value:'leather' }, { label:'Custom Interiors', value:'custom' }, { label:'Classic Restoration', value:'classic' }
+    ];
+    const gf = this.state.galleryFilter;
+    const galleryFilters = galFilters.map(x=>({ ...x, ...pill(gf===x.value), click: ()=>this.setState({galleryFilter:x.value}) }));
+    const galleryItems = gf==='all' ? gAll : gAll.filter(x=>x.cat===gf);
+    const isMobile = (this.state.vw || 1200) < 900;
+
+    return {
+      year: 2026,
+      phone: '(03) 9800 0003', phoneHref: 'tel:+61398000003',
+      isHome: page==='home', isServices: page==='services', isAbout: page==='about', isGallery: page==='gallery', isContact: page==='contact',
+      goHome: ()=>this.go('home'), goServices: ()=>this.go('services'), goAbout: ()=>this.go('about'), goGallery: ()=>this.go('gallery'), goContact: ()=>this.go('contact'),
+      isMobile, isDesktop: !isMobile, mobileNavOpen: this.state.mobileNavOpen, toggleNav: ()=>this.toggleNav(),
+      openCall: (e)=>this.openCall(e), callOpen: this.state.callOpen, closeCall: ()=>this.closeCall(), dialNow: ()=>this.dialNow(),
+      navItems: [
+        { label:'Home', active:page==='home', click:()=>this.go('home') },
+        { label:'Services', active:page==='services', click:()=>this.go('services') },
+        { label:'Gallery', active:page==='gallery', click:()=>this.go('gallery') },
+        { label:'About', active:page==='about', click:()=>this.go('about') },
+        { label:'Contact', active:page==='contact', click:()=>this.go('contact') }
+      ],
+      stitch: this.props.showStitching ?? true,
+      showMap: this.props.showServiceAreaMap ?? true,
+      showCall: this.props.showFloatingCall ?? true,
+      trustStats: [
+        { big:'4.6â˜…', label:'36 Google reviews', logo:true },
+        { big:'20+', label:'Years at the machine' },
+        { big:'13', label:'Eastern suburbs served' },
+        { big:'1', label:'Tradesman on every job' }
+      ],
+      services: services.map((s,i)=>({ ...s, bg: (i===0 ? bgLocal(ROOF) : i===1 ? bgLocal(SEAT) : i===5 ? bgLocal(WHEEL) : bgStyle(svImg[i])) })),
+      reviews, faqs, galleryFilters,
+      serviceDetail: serviceDetail.map((s,i)=>({ ...s, bg: (i===0 ? bgLocal(ROOF) : i===5 ? bgLocal(WHEEL) : bgStyle(svImg[i])) })),
+      featured: featured.map((p,i)=>({ ...p, bg: (i===1 ? bgLocal(ROOF) : bgStyle(featImg[i])) })),
+      galleryItems: galleryItems.map(g=>({ ...g, bg: (g.title==='BMW E36 Roof Liner Repair' ? bgLocal(ROOF) : g.title==='Steering Wheel Re-Wrap' ? bgLocal(WHEEL) : bgStyle(g.img)) })),
+      whyPoints: [
+        { h:'Repair or retrim â€” the honest call', p:'You get told what actually needs doing, not the biggest quote.' },
+        { h:'Materials matched to your car', p:'Leather grades, foam densities and finishes chosen to suit how you drive.' },
+        { h:'Everything finished by hand', p:'No outsourcing, no production line â€” Adam does the work.' },
+        { h:'Local, and easy to reach', p:'Right in Bayswater, a short run from across the eastern suburbs.' }
+      ],
+      suburbs: ['Bayswater','Wantirna South','Wantirna','Knoxfield','Boronia','Ferntree Gully','Ringwood','Heathmont','Croydon','Kilsyth','Scoresby','Rowville','Vermont','Wheelers Hill'],
+      timeline: [
+        { year:'Trade', h:'Learned the old way', p:'Apprenticed on the tools, covering everything from daily drivers to classics.' },
+        { year:'Growth', h:'Built Inside Cars', p:'Established the workshop and a reputation for honest, hand-finished trim work.' },
+        { year:'Today', h:'Bayswater workshop', p:'Serving Melbourne\u2019s eastern suburbs from 9 John St, one job at a time.' },
+        { year:'Always', h:'Every stitch by hand', p:'Still personally on every car that comes through the door.' }
+      ],
+      credentials: [
+        { icon:'âœ‚', h:'Master Motor Trimmer', p:'Decades of hands-on trimming across every kind of vehicle.' },
+        { icon:'â˜…', h:'4.6â˜… on Google', p:'36 reviews from customers across the eastern suburbs.' },
+        { icon:'â—†', h:'Classic specialist', p:'Period-correct restorations finished to concours standard.' }
+      ],
+      contactCards: [
+        { icon:'â˜Ž', h:'Call the workshop', p:'(03) 9800 0003\nMonâ€“Fri 8amâ€“5pm' },
+        { icon:'âœ‰', h:'Email us', p:'ajfairbrother@outlook.com' },
+        { icon:'âš²', h:'Visit us', p:'9 John St\nBayswater VIC 3153' },
+        { icon:'â—·', h:'Opening hours', p:'Monâ€“Fri 8amâ€“5pm\nSat 9amâ€“12pm' }
+      ],
+      footerServices: ['Roof Lining Repair','Car Seat Retrim','Leather Repair','Custom Interiors','Classic Restoration','Steering Wheel Retrim'],
+      // form
+      submitted: this.state.submitted, notSubmitted: !this.state.submitted,
+      f: this.state.form,
+      onName:this.setField('name'), onPhone:this.setField('phone'), onEmail:this.setField('email'),
+      onSuburb:this.setField('suburb'), onVehicle:this.setField('vehicle'), onDesc:this.setField('desc'), onCompany:this.setField('company'),
+      photos: this.state.photos.map((p,i)=>({ ...p, style:`width:100%;height:100%;background-image:url(${p.url});background-size:cover;background-position:center`, remove: ()=>this.removePhoto(i) })),
+      canAddPhotos: this.state.photos.length < 5,
+      handleFiles: (e)=>this.handleFiles(e),
+      submit: (e)=>this.submit(e), resetForm: ()=>this.reset()
+    };
+  }
+}
+</script>
+</body>
+</html>
+
