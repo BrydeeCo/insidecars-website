@@ -37,9 +37,12 @@ input,textarea{font-family:inherit}
 
 <header style="position:sticky;top:0;z-index:50;background:rgba(23,19,15,.86);backdrop-filter:blur(12px);border-bottom:1px solid #2d251d">
   <div style="max-width:1240px;margin:0 auto;padding:0 clamp(18px,4vw,44px);height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px">
-    <button onClick="{{ goHome }}" style="display:flex;align-items:baseline;gap:10px;background:none;border:none;padding:0;color:#f2ece2">
-      <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:25px;letter-spacing:.01em">Inside Cars</span>
-      <span style="font-family:'Hanken Grotesk';font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8a7f6f;transform:translateY(-2px)">Est. Bayswater</span>
+    <button onClick="{{ goHome }}" style="display:flex;flex-direction:column;align-items:flex-start;background:none;border:none;padding:0;color:#f2ece2">
+      <span style="display:flex;align-items:baseline;gap:10px">
+        <span style="font-family:'Cormorant Garamond',serif;font-weight:700;font-size:25px;letter-spacing:.01em">Inside Cars</span>
+        <span style="font-family:'Hanken Grotesk';font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#8a7f6f;transform:translateY(-2px)">Est. Bayswater</span>
+      </span>
+      <span style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:11px;color:#8a7f6f;letter-spacing:.06em;margin-top:1px">1 John 3:2</span>
     </button>
     <sc-if value="{{ isDesktop }}" hint-placeholder-val="{{ true }}">
     <div style="display:flex;align-items:center;gap:22px">
