@@ -375,12 +375,13 @@ input,textarea{font-family:inherit}
         <div style="font-size:13px;font-weight:600;color:#cbc1b1;margin-bottom:8px">Photos of the damage <span style="color:#8a7f6f;font-weight:400">— helps us quote faster (up to 5)</span></div>
         <div style="display:flex;flex-wrap:wrap;gap:12px">
           <sc-for list="{{ photos }}" as="ph" hint-placeholder-count="0"><div style="position:relative;width:96px;height:96px;border:1px solid #3a3129;border-radius:2px;overflow:hidden;background:#12100c"><div style="{{ ph.style }}"></div><button type="button" onClick="{{ ph.remove }}" style="position:absolute;top:3px;right:3px;width:22px;height:22px;border-radius:50%;border:none;background:rgba(23,19,15,.85);color:#f2ece2;font-size:14px;line-height:1;display:flex;align-items:center;justify-content:center">×</button></div></sc-for>
-          <sc-if value="{{ canAddPhotos }}" hint-placeholder-val="{{ true }}"><label style="width:96px;height:96px;border:1.5px dashed #4a3f31;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#8a7f6f;transition:border-color .15s" style-hover="border-color:#c9a06a"><span style="font-size:24px;line-height:1;color:#c9a06a">＋</span><span style="font-size:11px">Add photo</span><input type="file" accept="image/*" multiple capture="environment" onChange="{{ handleFiles }}" style="display:none"></label></sc-if>
+          <sc-if value="{{ canAddPhotos }}" hint-placeholder-val="{{ true }}"><label style="width:96px;height:96px;border:1.5px dashed #4a3f31;border-radius:2px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;cursor:pointer;color:#8a7f6f;transition:border-color .15s" style-hover="border-color:#c9a06a"><span style="font-size:24px;line-height:1;color:#c9a06a">＋</span><span style="font-size:11px">Add photo</span><input type="file" accept="image/*" multiple onChange="{{ handleFiles }}" style="display:none"></label></sc-if>
         </div>
         <div style="font-size:12px;color:#8a7f6f;margin-top:8px">Photos are resized on your device before sending — big phone photos are fine.</div>
       </div>
 
-      <button type="submit" style="align-self:flex-start;background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:15px;padding:15px 32px;border-radius:2px;transition:background .18s;margin-top:6px" style-hover="background:#dcb87e">Send Enquiry</button>
+      <button type="submit" onClick="{{ submit }}" style="align-self:flex-start;background:#c9a06a;color:#17130f;border:none;font-weight:700;font-size:15px;padding:15px 32px;border-radius:2px;transition:background .18s;margin-top:6px" style-hover="background:#dcb87e">{{ submitLabel }}</button>
+      <sc-if value="{{ sendError }}"><div style="border:1px solid #6b3b34;background:#241512;color:#e7b7ad;font-size:14px;line-height:1.55;padding:12px 15px;border-radius:2px">Sorry — that didn't go through. Please check your name and phone are filled in and try again, or call the workshop on (03) 9800 0003.</div></sc-if>
       <div style="font-size:12px;color:#8a7f6f">By sending you agree to be contacted about your enquiry. We never share your details.</div>
     </form>
     </sc-if>
@@ -439,7 +440,7 @@ input,textarea{font-family:inherit}
 <script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:880},&quot;showStitching&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showServiceAreaMap&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;},&quot;showFloatingCall&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Layout&quot;}}">
 class Component extends DCLogic {
   state = {
-    page: 'home', galleryFilter: 'all', openFaq: 0, submitted: false, photos: [],
+    page: 'home', galleryFilter: 'all', openFaq: 0, submitted: false, sending: false, sendError: false, photos: [],
     form: { name:'', phone:'', email:'', suburb:'', vehicle:'', desc:'', company:'' },
     mobileNavOpen: false, vw: (typeof window!=='undefined' ? window.innerWidth : 1200),
     callOpen: false
@@ -480,14 +481,62 @@ class Component extends DCLogic {
   }
   removePhoto(i){ this.setState(s => ({ photos: s.photos.filter((_,x)=>x!==i) })); }
 
-  submit(e){
-    e.preventDefault();
-    if (this.state.form.company) return; // honeypot
-    try { window.gtag && window.gtag('event','generate_lead'); } catch(_){}
-    this.setState({ submitted: true });
-    if (typeof window!=='undefined') { const el=document.getElementById('quote'); if(el) window.scrollTo({top: el.offsetTop-60}); }
+  dataURLToBlob(dataURL){
+    const parts = dataURL.split(','); const mime = (parts[0].match(/:(.*?);/) || [])[1] || 'image/jpeg';
+    const bin = atob(parts[1]); const arr = new Uint8Array(bin.length);
+    for (let i=0;i<bin.length;i++) arr[i] = bin.charCodeAt(i);
+    return new Blob([arr], { type: mime });
   }
-  reset(){ this.setState({ submitted:false, photos:[], form:{ name:'',phone:'',email:'',suburb:'',vehicle:'',desc:'',company:'' } }); }
+  submit(e){
+    if (e) e.preventDefault();
+    if (this.state.sending) return;
+    const f = this.state.form;
+    if (f.company) return; // honeypot
+    if (!f.name || !f.phone) { this.setState({ sendError: true }); return; }
+    try { window.gtag && window.gtag('event','generate_lead'); } catch(_){}
+    this.setState({ sending: true, sendError: false });
+
+    const iframe = document.createElement('iframe');
+    iframe.name = 'ic_submit_frame_' + Math.round(this.state.vw + this.state.photos.length);
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const form = document.createElement('form');
+    form.action = 'https://formsubmit.co/fdabdc98e2419535b7ff1888b85ba6e0';
+    form.method = 'POST'; form.enctype = 'multipart/form-data'; form.target = iframe.name; form.style.display = 'none';
+    const add = (n,v) => { const i=document.createElement('input'); i.type='hidden'; i.name=n; i.value=v; form.appendChild(i); };
+    add('Name', f.name); add('Phone', f.phone);
+    add('Email', f.email || '(not provided)'); add('Suburb', f.suburb || '(not provided)');
+    add('Vehicle', f.vehicle || '(not provided)'); add('Details', f.desc || '(none)');
+    add('_subject', 'New quote request — Inside Cars website'); add('_cc', 'ajfairbrother@outlook.com');
+    add('_captcha', 'false'); add('_template', 'table');
+    if (f.email) add('_replyto', f.email);
+
+    const fileInput = document.createElement('input');
+    fileInput.type = 'file'; fileInput.name = 'attachment'; fileInput.multiple = true;
+    try {
+      const dt = new DataTransfer();
+      this.state.photos.forEach((p,i) => { try { dt.items.add(new File([this.dataURLToBlob(p.url)], 'photo-'+(i+1)+'.jpg', {type:'image/jpeg'})); } catch(_){} });
+      fileInput.files = dt.files;
+    } catch(_){}
+    form.appendChild(fileInput);
+    document.body.appendChild(form);
+
+    let done = false;
+    const finish = (ok) => {
+      if (done) return; done = true;
+      try { document.body.removeChild(form); } catch(_){}
+      try { document.body.removeChild(iframe); } catch(_){}
+      if (ok) { this.setState({ sending:false, submitted:true }); const el=document.getElementById('quote'); if(el) window.scrollTo({top: el.offsetTop-60}); }
+      else { this.setState({ sending:false, sendError:true }); }
+    };
+    setTimeout(() => {
+      iframe.addEventListener('load', () => finish(true));
+      setTimeout(() => finish(true), 15000);
+      try { form.submit(); } catch(err){ finish(false); }
+    }, 60);
+  }
+  reset(){ this.setState({ submitted:false, sending:false, sendError:false, photos:[], form:{ name:'',phone:'',email:'',suburb:'',vehicle:'',desc:'',company:'' } }); }
 
   renderVals(){
     const page = this.state.page;
@@ -622,6 +671,7 @@ class Component extends DCLogic {
       footerServices: ['Roof Lining Repair','Car Seat Retrim','Leather Repair','Custom Interiors','Classic Restoration','Steering Wheel Retrim'],
       // form
       submitted: this.state.submitted, notSubmitted: !this.state.submitted,
+      sendError: this.state.sendError, submitLabel: this.state.sending ? 'Sending…' : 'Send Enquiry',
       f: this.state.form,
       onName:this.setField('name'), onPhone:this.setField('phone'), onEmail:this.setField('email'),
       onSuburb:this.setField('suburb'), onVehicle:this.setField('vehicle'), onDesc:this.setField('desc'), onCompany:this.setField('company'),
